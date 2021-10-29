@@ -30,6 +30,6 @@ jobs:
         run: chmod 777 ./sample.sh 
       # Runs a set of commands using the runners shell
       - name: Run a multi-line script
-        run: ./sample.sh 
+        run: ./sample.sh <new_version> pom.xml
           echo Add other actions to build,
           echo test, and deploy your project.
