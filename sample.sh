@@ -14,5 +14,5 @@ str="-SNAPSHOT"
 incrementVer=$major$var2$miner$var4$bug$str
 echo $incrementVer
 
-pomChange=$(grep -ri "<version>" pom.xml | head -n 1 | sed -i "s/\(<version>\)[^<]*\ (<\/version>\)/\1$incrementVer\2/" pom.xml)
+pomChange=$(grep -ri "<version>" pom.xml | head -n 1 | sed -i "s/\(<version>\)[^<]*\(<\/version>\)/\1$incrementVer\2/" pom.xml)
 echo $pomChange
