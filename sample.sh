@@ -1,4 +1,7 @@
 #!/bin/bash
 
-cat pom.xml
-perl -ne ' { s/(.*)\.(\d+)(-SNAPSHOT.*)/printf("%s.%d%s",$1,$2+1,$3)/ge and $_=~s/.$//g if /<version>/; print } ' pom.xml
+open pom.xml ;
+register-namespace m http://maven.apache.org/POM/4.0.0 ;
+for //m:version
+    set . xsh:subst(., '(?<=\.)([0-9]+)$', '$1+1', 'e') ;
+save :b ;
