@@ -14,4 +14,3 @@ echo $incrementVer
 
 LN=$(grep -n "<version>" pom.xml | head -1 | awk -F ":" '{print $1}') sed -i "$LN s/$version/$incrementVer/" pom.xml
 echo $LN
-git commit -m "$*"
