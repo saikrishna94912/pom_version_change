@@ -1,6 +1,7 @@
 #!/bin/bash
 
-cd Project/
+cd pom_version_change/
+
 
 version=$(grep -ri "<version>" pom.xml |head -n 1 | sed -e 's/^[ \t]*<version>\ 
 ([^<]*\)<.*$/\1/')
