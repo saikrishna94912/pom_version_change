@@ -19,10 +19,6 @@
 	<artifactId>org.jacoco.examples.maven.java</artifactId>
 	<version>1.0.0</version>
 	<packaging>jar</packaging>
-	
-for //m:version
-    set . xsh:subst(., '(?<=\.)([0-9]+)$', '$1+1', 'e') ;
-save :b ;
 
 	<name>JaCoCo Maven plug-in example for Java project</name>
 	<url>http://www.eclemma.org/jacoco</url>
