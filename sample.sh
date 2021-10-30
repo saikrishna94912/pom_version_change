@@ -14,4 +14,4 @@ echo $incrementVer
 
 LN=$(grep -n "<version>" pom.xml | head -1 | awk -F ":" '{print $1}') sed -i "$LN s/$version/$incrementVer/" pom.xml
 echo $LN
-sed "<groupId='org.jacoco'>/<\/groupId>/ s/<version=''><\/version>/<version=echo $LN><\/version>/g;" pom.xml
+sed -i "s/\(<version>\)[^<]*\(<\/version>\)/\1$LN\2/" pom.xml
