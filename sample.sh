@@ -14,10 +14,3 @@ echo $incrementVer
 
 LN=$(grep -n "<version>" pom.xml | head -1 | awk -F ":" '{print $1}') sed -i "$LN s/$version/$incrementVer/" pom.xml
 echo $LN
-echo $(grep -n "<version>" pom.xml | head -1 | awk -F ":" '{print $1}') sed -i "$LN s/$version/$incrementVer/" pom.xml
-echo $LN
-mvn versions:set -DnewVersion=$LN
-
-git add -A;
-git commit -m "changes";
-git push origin pom_version_change
