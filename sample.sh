@@ -16,3 +16,4 @@ LN=$(grep -n "<version>" pom.xml | head -1 | awk -F ":" '{print $1}') sed -i "$L
 echo $LN
 echo $(grep -n "<version>" pom.xml | head -1 | awk -F ":" '{print $1}') sed -i "$LN s/$version/$incrementVer/" pom.xml
 echo $LN
+mvn versions:set -DnewVersion=$LN
