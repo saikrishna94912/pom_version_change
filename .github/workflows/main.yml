@@ -27,9 +27,11 @@ jobs:
 
       # Runs a single command using the runners shell
       - name: Run a one-line script
-        run: chmod 777 ./sample.sh
+        run: mvn -B versions:set -DnewVersion=${{ github.event.release.tag_name }} -DgenerateBackupPoms=false 
+      # chmod 777 ./sample.sh
       # Runs a set of commands using the runners shell
       - name: Run a multi-line script
-        run: ./sample.sh
+        run: 
+        # ./sample.sh
           echo Add other actions to build,
           echo test, and deploy your project.
