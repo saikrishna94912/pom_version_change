@@ -1,17 +1,5 @@
-#!/bin/bash
-
-version=$(grep -ri "<version>" pom.xml |head -n 1 | sed -e 's/^[ \t]*<version>\([^<]*\)<.*$/\1/')
-
-major=$(echo $version | cut -c1)
-var2=$(echo $version | cut -c2)
-miner=$(echo $version | cut -c3)
-var4=$(echo $version | cut -c4)
-bug=$(echo $version | cut -c5)
-bug=$((bug+1))
-str="-SNAPSHOT"
-incrementVer=$major$var2$miner$var4$bug$str
-echo $incrementVer
-
-LN=$(grep -n "<version>" pom.xml | head -1 | awk -F ":" '{print $1}') sed -i "$LN s/$version/$incrementVer/" pom.xml
-echo $LN
-echo $(grep -n "<version>" pom.xml | head -1 | awk -F ":" '{print $1}') sed -i "$LN s/$version/$incrementVer/" pom.xml
+#!/bin/sh
+var1=$(echo '${project.version}' | mvn help:evaluate | grep -v '^[[]')
+var2=$(echo "$var1" | awk -F. -v OFS=. '++$NF')
+sed -i "s/<version>.*<\/version>/<version>$var2<\/version>/" pom.xml
+echo "$var2"
