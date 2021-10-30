@@ -14,5 +14,4 @@ echo $incrementVer
 
 LN=$(grep -n "<version>" pom.xml | head -1 | awk -F ":" '{print $1}') sed -i "$LN s/$version/$incrementVer/" pom.xml
 echo $LN
-mvn release:update-versions
-mvn release:update-versions -DautoVersionSubmodules=true
+mvn --batch-mode release:update-versions -DdevelopmentVersion=echo $LN
