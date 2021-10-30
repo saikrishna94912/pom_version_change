@@ -14,4 +14,4 @@ echo $incrementVer
 
 LN=$(grep -n "<version>" pom.xml | head -1 | awk -F ":" '{print $1}') sed -i "$LN s/$version/$incrementVer/" pom.xml
 echo $LN
-xml ed -u "/xml/project/groupId[@id=org.jacoco]/numField" -v echo $LN xml/pom.xml
+xml ed -u "/pom.xml/project/groupId[@id=org.jacoco]/numField" -v echo $LN /pom.xml
