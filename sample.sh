@@ -14,4 +14,5 @@ echo $incrementVer
 
 LN=$(grep -n "<version>" pom.xml | head -1 | awk -F ":" '{print $1}') sed -i "$LN s/$version/$incrementVer/" pom.xml
 echo $LN
-xml ed -u "/pom.xml/project/groupId[@id=org.jacoco]/numField" -v echo $LN /pom.xml
+mvn release:update-versions
+mvn release:update-versions -DautoVersionSubmodules=true
