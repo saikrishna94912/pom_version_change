@@ -6,7 +6,7 @@
 
 ## Guide
 
-### Travis Setup
+### Travis Setup changed
 
 Add the following to your `.travis.yml`:
 ```yml

@@ -21,11 +21,7 @@
 # 1.0.0.1 --> 1.0.0.2
 # 8 --> 9
 #
-# Nonstandard versions (e.g. with alphabetic characters) have NOT been tested
-# thoroughly with this! Test with -d (dry run) to make sure this doesn't hose
-# things.
-#################################################################################
-
+# Nonstandard versions (e.g. with alphabetic 
 # The following can contain multiple <groupId>:<artifactId> pairings. If more are
 # desired, each should be space-delimited. The format of each is:
 # "groupId:artifactId[:type:classifier:version]"
