@@ -18,7 +18,7 @@
 	<groupId>org.jacoco</groupId>
 	<artifactId>org.jacoco.examples.maven.java</artifactId>
 <<<<<<< HEAD
-	<version>1.0.15</version>
+	<version>1.0.16</version>
 =======
 	<version>3.0.2</version>
 >>>>>>> 2d1da34096fae488cb6992fa46dfabac91947ec0
