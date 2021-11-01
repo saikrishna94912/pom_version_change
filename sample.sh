@@ -1,14 +1,10 @@
 #!/bin/bash
 
 version=$(grep -ri "<version>" pom.xml |head -n 1 | sed -e 's/^[ \t]*<version>\([^<]*\)<.*$/\1/')
-echo $version
 latest=$(echo $version | cut -d "." -f 1)
-latest=$((latest+1))
-echo $latest
 major=$(echo $version | cut -d "." -f 2)
-echo $major
 minor=$(echo $version | cut -d "." -f 3)
-echo $minor
+minor=$((minor+1))
 str="."
 incrementVer=$latest$str$major$str$minor
 echo $incrementVer
