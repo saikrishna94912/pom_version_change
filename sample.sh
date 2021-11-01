@@ -4,9 +4,11 @@ version=$(grep -ri "<version>" pom.xml |head -n 1 | sed -e 's/^[ \t]*<version>\(
 latest=$(echo $version | cut -d "." -f 1)
 major=$(echo $version | cut -d "." -f 2)
 minor=$(echo $version | cut -d "." -f 3)
-if [ $minor gt 1000 ]; then 
+if [ $minor gt 1000 ]
+then 
 latest=$((latest+1))
 else  minor=$((minor+1))
+fi
 echo $latest
 echo $minor
 str="."
