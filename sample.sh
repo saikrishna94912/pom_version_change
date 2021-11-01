@@ -5,7 +5,7 @@ latest=$(echo $version | cut -d "." -f 1)
 major=$(echo $version | cut -d "." -f 2)
 minor=$(echo $version | cut -d "." -f 3)
 if [ $minor gt 1000 ]; then 
-latest=$((latest+1) 
+latest=$((latest+1))
 else  minor=$((minor+1))
 echo $latest
 echo $minor
