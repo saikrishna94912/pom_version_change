@@ -10,8 +10,6 @@ latest=$((latest+1))
 minor=0
 else  minor=$((minor+1))
 fi
-echo $latest
-echo $minor
 str="."
 incrementVer=$latest$str$major$str$minor
 echo $incrementVer
