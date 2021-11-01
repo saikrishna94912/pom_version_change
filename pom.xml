@@ -17,7 +17,7 @@
 
 	<groupId>org.jacoco</groupId>
 	<artifactId>org.jacoco.examples.maven.java</artifactId>
-	<version>1.0.1002</version>
+	<version>1.0.1003</version>
 	<packaging>jar</packaging>
 
 	<name>JaCoCo Maven plug-in example for Java project</name>
