@@ -7,6 +7,7 @@ minor=$(echo $version | cut -d "." -f 3)
 if [ $minor -gt 1000 ]
 then 
 latest=$((latest+1))
+minor=0
 else  minor=$((minor+1))
 fi
 echo $latest
